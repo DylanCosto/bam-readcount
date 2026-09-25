@@ -26,6 +26,7 @@
 #include <cmath>
 #include <map>
 #include <set>
+#include <vector>
 
 using namespace std;
 namespace po = boost::program_options;
