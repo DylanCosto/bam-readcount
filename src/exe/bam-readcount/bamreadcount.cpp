@@ -538,6 +538,9 @@ int main(int argc, char *argv[])
             return 1;
         }
 
+        // Reuse decompressed BAM blocks when nearby sites revisit the same data.
+        hts_set_cache_size(d.in->file, 16 * 1024 * 1024);
+
         // Load index
         hts_idx_t *idx;
         idx = sam_index_load3(
